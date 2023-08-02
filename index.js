@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(express.json());
 
 app.get("/", (request, response) => {
-  response.send("api jornadas");
+  response.send("wellcome to backend zone");
 });
 
 app.use(imuDataRouter);
