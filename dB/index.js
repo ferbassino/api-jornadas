@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const password = process.env.PASSWORD;
+// const password = process.env.PASSWORD;
 const URI =
-  "mongodb+srv://ferbassino:1yrdaOVxl8CtBvzp@cluster0.snufx0b.mongodb.net/data?retryWrites=true&w=majority";
-console.log(password);
+  "mongodb+srv://ferbassino:6U4Xnn6kaZOBjAhl@cluster0.fu84jsk.mongodb.net/jornData?retryWrites=true&w=majority";
+console.log(URI);
 module.exports = mongoose
   .connect(URI)
   .then(() => {
