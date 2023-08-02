@@ -4,7 +4,10 @@ const ImuDataSchema = new Schema({
   name: String,
   ref: Array,
   testTime: Number,
-  data: Array,
+  accX: Array,
+  accY: Array,
+  accZ: Array,
+  accT: Array,
 });
 
 module.exports = model("imuData", ImuDataSchema);

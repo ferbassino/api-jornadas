@@ -53,8 +53,16 @@ exports.deleteImuData = async (req, res) => {
 
 exports.createImuData = async (request, response) => {
   try {
-    const { name, ref, testTime, data } = request.body;
-    const newImuData = new ImuData({ name, ref, testTime, data });
+    const { name, ref, testTime, accX, accY, accZ, accT } = request.body;
+    const newImuData = new ImuData({
+      name,
+      ref,
+      testTime,
+      accX,
+      accY,
+      accZ,
+      accT,
+    });
     await newImuData.save();
     response.json({
       success: true,
