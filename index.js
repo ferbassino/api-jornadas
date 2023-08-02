@@ -7,7 +7,11 @@ const bodyParser = require("body-parser");
 const imuDataRouter = require("./routes/imuData");
 const cors = require("cors");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(express.json());
