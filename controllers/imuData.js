@@ -52,12 +52,25 @@ exports.deleteImuData = async (req, res) => {
 };
 
 exports.createImuData = async (request, response) => {
-  console.log("entra al post");
   try {
-    const { name, ref, testTime, accX, accY, accZ, accT } = request.body;
+    const {
+      name,
+      identifier,
+      mass,
+      array,
+      object,
+      testTime,
+      accX,
+      accY,
+      accZ,
+      accT,
+    } = request.body;
     const newImuData = new ImuData({
       name,
-      ref,
+      identifier,
+      mass,
+      array,
+      object,
       testTime,
       accX,
       accY,
